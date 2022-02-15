@@ -11,7 +11,11 @@ class Product
 
     public function __construct($post=null)
     {
-        $this->id = $post['search'];
+        if ($post)
+        {
+            $this->id = $post['search'];
+        }
+
     }
 
     public function getAllProduct()
